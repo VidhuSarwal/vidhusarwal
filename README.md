@@ -81,4 +81,4 @@ status   : shipping things that work at 3am in prod
   <sub>selected from 40k+ gsoc applicants &nbsp;·&nbsp; if it only works on your machine, it's not done.</sub>
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:16213e,50:1a1a2e,100:0d1117&height=100&section=footer" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1e3a5f,50:1a2744,100:0d1117&height=100&section=footer" width="100%"/>
