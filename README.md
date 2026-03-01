@@ -1,16 +1,29 @@
-## Hi there 👋
+# vidhu
 
-<!--
-**VidhuSarwal/vidhusarwal** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+```
+hardware → linux → containers → llms
+```
 
-Here are some ideas to get you started:
+```
+cs '27
+gsoc @ beagleboard
+samsung r&d
+```
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+```
+focus:
+  embedded linux
+  ai infrastructure
+  edge systems
+  distributed reliability
+```
+
+```
+currently:
+  building systems that survive outside demos
+```
+
+```
+note:
+  clean abstractions > clever hacks
+```
