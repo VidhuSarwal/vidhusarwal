@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="168" viewBox="0 0 900 168">
+
+  <!-- Background — matches GitHub dark mode -->
+  <rect width="900" height="168" fill="#0D1117"/>
+
+  <!-- Dot grid -->
+  <defs>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="0.5" cy="0.5" r="0.55" fill="rgba(255,255,255,0.055)"/>
+    </pattern>
+    <!-- Gradient for name — white to steel blue -->
+    <linearGradient id="ng" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#E6EDF3"/>
+      <stop offset="100%" stop-color="#7BAFD4"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="168" fill="url(#dots)"/>
+
+  <!-- Frame border -->
+  <rect x="18" y="18" width="864" height="132" fill="none"
+        stroke="rgba(48,54,61,0.95)" stroke-width="1"/>
+
+  <!-- Tick marks on top/bottom border edges -->
+  <line x1="225" y1="14" x2="225" y2="18" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+  <line x1="450" y1="14" x2="450" y2="18" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+  <line x1="675" y1="14" x2="675" y2="18" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+  <line x1="225" y1="150" x2="225" y2="154" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+  <line x1="450" y1="150" x2="450" y2="154" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+  <line x1="675" y1="150" x2="675" y2="154" stroke="rgba(255,255,255,0.10)" stroke-width="1"/>
+
+  <!-- Corner brackets — blue accent -->
+  <path d="M18 50 L18 18 L50 18"   fill="none" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="square"/>
+  <path d="M850 18 L882 18 L882 50" fill="none" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="square"/>
+  <path d="M18 118 L18 150 L50 150" fill="none" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="square"/>
+  <path d="M850 150 L882 150 L882 118" fill="none" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="square"/>
+
+  <!-- Main name — thin system-ui, gradient fill -->
+  <text x="450" y="83"
+    text-anchor="middle"
+    font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
+    font-size="42"
+    font-weight="300"
+    letter-spacing="10"
+    fill="url(#ng)">VIDHU SARWAL</text>
+
+  <!-- Subtitle — monospace -->
+  <text x="450" y="110"
+    text-anchor="middle"
+    font-family="'SF Mono', 'Fira Code', 'Courier New', Consolas, monospace"
+    font-size="10"
+    letter-spacing="4.5"
+    fill="#6E7681">SYSTEMS ENGINEER  ·  FINAL YEAR CS  ·  GSoC '25  ·  LKMP '26</text>
+
+  <!-- Divider before status bar -->
+  <line x1="36" y1="126" x2="864" y2="126" stroke="rgba(48,54,61,0.8)" stroke-width="1"/>
+
+  <!-- Status bar -->
+  <text x="36" y="142"
+    font-family="'SF Mono', 'Fira Code', 'Courier New', Consolas, monospace"
+    font-size="8.5" letter-spacing="2.2" fill="#30363D">30.7333°N  76.7794°E</text>
+  <text x="450" y="142" text-anchor="middle"
+    font-family="'SF Mono', 'Fira Code', 'Courier New', Consolas, monospace"
+    font-size="8.5" letter-spacing="2.2" fill="#30363D">VX. WORKS</text>
+  <text x="864" y="142" text-anchor="end"
+    font-family="'SF Mono', 'Fira Code', 'Courier New', Consolas, monospace"
+    font-size="8.5" letter-spacing="2.2" fill="#30363D">SYS · NOMINAL</text>
+
+</svg>

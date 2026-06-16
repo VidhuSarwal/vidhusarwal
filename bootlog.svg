@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="210" viewBox="0 0 900 210">
+
+  <!-- Page background — matches GitHub dark -->
+  <rect width="900" height="210" fill="#0D1117"/>
+
+  <!-- Terminal chrome -->
+  <rect x="0" y="0" width="900" height="36" rx="0" fill="#161B22"/>
+  <line x1="0" y1="36" x2="900" y2="36" stroke="#30363D" stroke-width="1"/>
+
+  <!-- Traffic lights -->
+  <circle cx="22" cy="18" r="5" fill="#FF5F57"/>
+  <circle cx="38" cy="18" r="5" fill="#FFBD2E"/>
+  <circle cx="54" cy="18" r="5" fill="#28CA41"/>
+
+  <!-- Terminal title -->
+  <text x="450" y="23" text-anchor="middle"
+    font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace"
+    font-size="10.5" letter-spacing="3.5" fill="#484F58">BOOT SEQUENCE — vidhu sarwal</text>
+
+  <!-- ─── Content lines ─────────────────────────────────────────────── -->
+
+  <!-- INIT -->
+  <text x="32" y="68"
+    font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace"
+    font-size="13" fill="#3FB950">[INIT]</text>
+  <text x="104" y="68"
+    font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace"
+    font-size="13" fill="#8B949E">systems engineer</text>
+  <text x="285" y="68"
+    font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace"
+    font-size="13" fill="#484F58"> · </text>
+  <text x="306" y="68"
+    font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace"
+    font-size="13" fill="#8B949E">final year cs student</text>
+
+  <!-- 2024 - SIH -->
+  <text x="32" y="95"
+    font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace"
+    font-size="13" fill="#58A6FF">[2024]</text>
+  <text x="104" y="95"
+    font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace"
+    font-size="13">
+    <tspan fill="#C9D1D9">Smart India Hackathon</tspan>
+    <tspan fill="#484F58"> · </tspan>
+    <tspan fill="#3FB950">national winner</tspan>
+    <tspan fill="#484F58"> · </tspan>
+    <tspan fill="#C9D1D9">led team of 5 across </tspan>
+    <tspan fill="#3FB950">10,000+</tspan>
+    <tspan fill="#C9D1D9"> participants</tspan>
+  </text>
+
+  <!-- 2025 - GSoC -->
+  <text x="32" y="122"
+    font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace"
+    font-size="13" fill="#58A6FF">[2025]</text>
+  <text x="104" y="122"
+    font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace"
+    font-size="13">
+    <tspan fill="#C9D1D9">Google Summer of Code</tspan>
+    <tspan fill="#484F58"> · </tspan>
+    <tspan fill="#3FB950">1 of ~1,500</tspan>
+    <tspan fill="#C9D1D9"> accepted from </tspan>
+    <tspan fill="#3FB950">40,000+</tspan>
+    <tspan fill="#C9D1D9"> applicants · patches upstreamed</tspan>
+  </text>
+
+  <!-- 2025 - Samsung -->
+  <text x="32" y="149"
+    font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace"
+    font-size="13" fill="#58A6FF">[2025]</text>
+  <text x="104" y="149"
+    font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace"
+    font-size="13">
+    <tspan fill="#C9D1D9">Samsung R&amp;D</tspan>
+    <tspan fill="#484F58"> · </tspan>
+    <tspan fill="#3FB950">61,000+</tspan>
+    <tspan fill="#C9D1D9"> LOC platform · latency reduced by </tspan>
+    <tspan fill="#3FB950">70%</tspan>
+    <tspan fill="#C9D1D9"> · adopted internally</tspan>
+  </text>
+
+  <!-- 2026 - LKMP -->
+  <text x="32" y="176"
+    font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace"
+    font-size="13" fill="#58A6FF">[2026]</text>
+  <text x="104" y="176"
+    font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace"
+    font-size="13">
+    <tspan fill="#C9D1D9">Linux Kernel Mentorship Program</tspan>
+    <tspan fill="#484F58"> · </tspan>
+    <tspan fill="#C9D1D9">Linux Foundation · LFX</tspan>
+  </text>
+
+  <!-- now -->
+  <text x="32" y="203"
+    font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace"
+    font-size="13" fill="#F0883E">[ now]</text>
+  <text x="104" y="203"
+    font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace"
+    font-size="13">
+    <tspan fill="#C9D1D9">building</tspan>
+    <tspan fill="#3FB950"> ▮</tspan>
+  </text>
+
+</svg>
