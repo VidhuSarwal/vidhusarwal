@@ -1,130 +1,91 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="232" viewBox="0 0 900 232">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="268" viewBox="0 0 900 268">
   <defs>
-    <filter id="glow" x="-3%" y="-3%" width="106%" height="106%">
-      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#1F6FEB" flood-opacity="0.12"/>
+    <filter id="shadow" x="-2%" y="-4%" width="104%" height="112%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000" flood-opacity="0.5"/>
     </filter>
-    <filter id="shadow" x="-2%" y="-5%" width="104%" height="115%">
-      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000000" flood-opacity="0.55"/>
+    <filter id="glow">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#1F6FEB" flood-opacity="0.10"/>
     </filter>
     <clipPath id="clip">
-      <rect x="12" y="12" width="876" height="208" rx="10"/>
+      <rect x="12" y="12" width="876" height="244" rx="10"/>
     </clipPath>
   </defs>
 
-  <!-- Page background -->
-  <rect width="900" height="232" fill="#0D1117"/>
+  <rect width="900" height="268" fill="#0D1117"/>
 
-  <!-- Terminal shadow -->
-  <rect x="12" y="12" width="876" height="208" rx="10" fill="#161B22" filter="url(#shadow)"/>
-
-  <!-- Terminal body clipped -->
+  <!-- Terminal shadow + body -->
+  <rect x="12" y="12" width="876" height="244" rx="10" fill="#161B22" filter="url(#shadow)"/>
   <g clip-path="url(#clip)">
-    <!-- Main body -->
-    <rect x="12" y="12" width="876" height="208" fill="#161B22"/>
-
+    <rect x="12" y="12" width="876" height="244" fill="#161B22"/>
     <!-- Chrome bar -->
     <rect x="12" y="12" width="876" height="44" fill="#1C2128"/>
     <line x1="12" y1="56" x2="888" y2="56" stroke="#2D333B" stroke-width="1"/>
-
-    <!-- Subtle scanlines on body -->
-    <rect x="12" y="56" width="876" height="164" fill="url(#scanlines)" opacity="0.03"/>
+    <!-- Subtle row zebra on content -->
+    <rect x="12" y="57"  width="876" height="26" fill="rgba(255,255,255,0.013)"/>
+    <rect x="12" y="109" width="876" height="26" fill="rgba(255,255,255,0.013)"/>
+    <rect x="12" y="161" width="876" height="26" fill="rgba(255,255,255,0.013)"/>
+    <rect x="12" y="213" width="876" height="26" fill="rgba(255,255,255,0.013)"/>
   </g>
-
-  <!-- Terminal border -->
-  <rect x="12" y="12" width="876" height="208" rx="10" fill="none" stroke="#2D333B" stroke-width="1" filter="url(#glow)"/>
+  <rect x="12" y="12" width="876" height="244" rx="10" fill="none" stroke="#2D333B" stroke-width="1" filter="url(#glow)"/>
 
   <!-- Traffic lights -->
   <circle cx="40" cy="34" r="6.5" fill="#FF5F57"/>
   <circle cx="62" cy="34" r="6.5" fill="#FFBD2E"/>
   <circle cx="84" cy="34" r="6.5" fill="#28CA41"/>
-  <!-- dots on lights -->
-  <circle cx="40" cy="34" r="2" fill="rgba(0,0,0,0.25)"/>
-  <circle cx="62" cy="34" r="2" fill="rgba(0,0,0,0.25)"/>
-  <circle cx="84" cy="34" r="2" fill="rgba(0,0,0,0.25)"/>
 
   <!-- Window title -->
   <text x="450" y="39" text-anchor="middle"
     font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace"
-    font-size="11" letter-spacing="1.5" fill="#545D68">vidhu@github: ~</text>
+    font-size="11" letter-spacing="1.5" fill="#545D68">vidhu@github</text>
 
-  <!-- Prompt line -->
-  <text x="32" y="82"
-    font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace"
-    font-size="13.5">
-    <tspan fill="#3FB950">❯</tspan>
-    <tspan fill="#8B949E"> dmesg | grep vidhu</tspan>
-  </text>
+  <!-- ─── Column headers ──────────────────────────────────── -->
+  <text x="32"  y="50" font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace" font-size="9.5" letter-spacing="2.5" fill="#30363D">WHEN</text>
+  <text x="148" y="50" font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace" font-size="9.5" letter-spacing="2.5" fill="#30363D">WHAT</text>
+  <text x="540" y="50" font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace" font-size="9.5" letter-spacing="2.5" fill="#30363D">HIGHLIGHT</text>
 
-  <!-- ─── Log entries ─────────────────────────────────── -->
+  <line x1="32" y1="54" x2="868" y2="54" stroke="#21262D" stroke-width="1"/>
 
-  <!-- INIT -->
-  <text x="32" y="106"
-    font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace"
-    font-size="13">
-    <tspan fill="#3FB950" font-weight="600">[INIT]</tspan>
-    <tspan fill="#545D68">  </tspan>
-    <tspan fill="#E6EDF3">systems engineer</tspan>
-    <tspan fill="#545D68">  ·  </tspan>
-    <tspan fill="#8B949E">final year cs student</tspan>
-  </text>
+  <!-- ─── Row 1: About ─────────────────────────────────────── -->
+  <text x="32" y="76" font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace" font-size="12.5" fill="#3FB950">about</text>
+  <text x="148" y="76" font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace" font-size="12.5" fill="#C9D1D9">Systems Engineer · Final Year CS Student</text>
+  <text x="540" y="76" font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace" font-size="12.5" fill="#8B949E">embedded linux → ai infra → distributed systems</text>
 
-  <!-- 2024 SIH -->
-  <text x="32" y="128"
-    font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace"
-    font-size="13">
-    <tspan fill="#58A6FF" font-weight="600">[2024]</tspan>
-    <tspan fill="#545D68">  </tspan>
-    <tspan fill="#8B949E">Smart India Hackathon  </tspan>
-    <tspan fill="#3FB950">national winner</tspan>
-    <tspan fill="#545D68">  ·  </tspan>
-    <tspan fill="#E6EDF3">led team of 5 across </tspan>
+  <!-- ─── Row 2: 2024 ──────────────────────────────────────── -->
+  <text x="32" y="128" font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace" font-size="12.5" fill="#58A6FF">2024</text>
+  <text x="148" y="128" font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace" font-size="12.5" fill="#C9D1D9">Smart India Hackathon</text>
+  <text x="540" y="128" font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace" font-size="12.5">
+    <tspan fill="#3FB950">National Winner</tspan>
+    <tspan fill="#8B949E"> · led team of 5 · </tspan>
     <tspan fill="#3FB950">10,000+</tspan>
-    <tspan fill="#E6EDF3"> participants</tspan>
+    <tspan fill="#8B949E"> participants</tspan>
   </text>
 
-  <!-- 2025 GSoC -->
-  <text x="32" y="150"
-    font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace"
-    font-size="13">
-    <tspan fill="#58A6FF" font-weight="600">[2025]</tspan>
-    <tspan fill="#545D68">  </tspan>
-    <tspan fill="#8B949E">Google Summer of Code  </tspan>
+  <!-- ─── Row 3: 2025 GSoC ─────────────────────────────────── -->
+  <text x="32" y="180" font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace" font-size="12.5" fill="#58A6FF">2025</text>
+  <text x="148" y="180" font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace" font-size="12.5" fill="#C9D1D9">Google Summer of Code</text>
+  <text x="540" y="180" font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace" font-size="12.5">
     <tspan fill="#3FB950">1 of ~1,500</tspan>
-    <tspan fill="#E6EDF3"> accepted from </tspan>
+    <tspan fill="#8B949E"> accepted from </tspan>
     <tspan fill="#3FB950">40,000+</tspan>
-    <tspan fill="#E6EDF3"> applicants  ·  patches upstreamed</tspan>
+    <tspan fill="#8B949E"> applicants · code upstreamed</tspan>
   </text>
 
-  <!-- 2025 Samsung -->
-  <text x="32" y="172"
-    font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace"
-    font-size="13">
-    <tspan fill="#58A6FF" font-weight="600">[2025]</tspan>
-    <tspan fill="#545D68">  </tspan>
-    <tspan fill="#8B949E">Samsung R&amp;D  </tspan>
+  <!-- ─── Row 4: 2025 Samsung ──────────────────────────────── -->
+  <text x="32" y="232" font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace" font-size="12.5" fill="#58A6FF">2025</text>
+  <text x="148" y="232" font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace" font-size="12.5" fill="#C9D1D9">Samsung R&amp;D · AI Platform</text>
+  <text x="540" y="232" font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace" font-size="12.5">
     <tspan fill="#3FB950">61,000+</tspan>
-    <tspan fill="#E6EDF3"> LOC production platform  ·  latency reduced </tspan>
+    <tspan fill="#8B949E"> lines of code · latency cut by </tspan>
     <tspan fill="#3FB950">70%</tspan>
   </text>
 
-  <!-- 2026 LKMP -->
-  <text x="32" y="194"
-    font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace"
-    font-size="13">
-    <tspan fill="#58A6FF" font-weight="600">[2026]</tspan>
-    <tspan fill="#545D68">  </tspan>
-    <tspan fill="#8B949E">Linux Kernel Mentorship Program  ·  </tspan>
-    <tspan fill="#E6EDF3">Linux Foundation  ·  LFX</tspan>
-  </text>
-
-  <!-- now — blinking cursor via CSS animation -->
-  <text x="32" y="216"
-    font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace"
-    font-size="13">
-    <tspan fill="#F0883E" font-weight="600">[ now]</tspan>
-    <tspan fill="#545D68">  </tspan>
-    <tspan fill="#E6EDF3">building </tspan>
-    <tspan id="cur" fill="#3FB950">▮</tspan>
+  <!-- ─── Row 5: 2026 LKMP ─────────────────────────────────── -->
+  <text x="32" y="258" font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace" font-size="12.5" fill="#F0883E">now</text>
+  <text x="148" y="258" font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace" font-size="12.5" fill="#C9D1D9">Linux Kernel Mentorship <tspan fill="#545D68">· Linux Foundation</tspan></text>
+  <text x="540" y="258" font-family="'SF Mono','Fira Code','Courier New',Consolas,monospace" font-size="12.5">
+    <tspan fill="#8B949E">contributing to the linux kernel · </tspan>
+    <tspan fill="#3FB950">building</tspan>
+    <tspan id="cur" fill="#3FB950"> ▮</tspan>
   </text>
 
   <style>

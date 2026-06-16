@@ -57,16 +57,6 @@ embedded     ESP32 · STM32 · I2C · MQTT · FreeRTOS · Buildroot
 
 ---
 
-<picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/VidhuSarwal/vidhusarwal/output/snake-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/VidhuSarwal/vidhusarwal/output/snake.svg"/>
-  <img alt="contribution snake" src="https://raw.githubusercontent.com/VidhuSarwal/vidhusarwal/output/snake-dark.svg" width="100%"/>
-</picture>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=VidhuSarwal&bg_color=0d1117&color=58a6ff&line=3fb950&point=58a6ff&area=true&area_color=3fb95020&hide_border=true" width="100%"/>
-
-<br/>
-
 <div align="center">
 
 <img height="155" src="https://github-readme-stats.vercel.app/api?username=VidhuSarwal&show_icons=true&theme=github_dark_dimmed&hide_border=true&count_private=true&hide_rank=false&rank_icon=percentile&bg_color=161B22&custom_title=stats"/>
