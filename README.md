@@ -12,6 +12,8 @@
 
 <img src="./bootlog.svg" width="100%"/>
 
+<br/>
+
 ---
 
 ## work
@@ -25,14 +27,22 @@
 
 ## projects
 
-**[VaultCrypt](https://github.com/VidhuSarwal/vaultcrypt)** &nbsp; `Go` `ChaCha20-DRBG` `AES-256-GCM`  
-Zero-knowledge distributed storage — ChaCha20-DRBG sharding across cloud providers, AES-256-GCM tokens at rest, 1k+ concurrent ops at sub-500ms.
+<div align="center">
 
-**[GitScope](https://github.com/VidhuSarwal/gitscope)** &nbsp; `Python` `Tree-sitter` `ChromaDB`  
-Turns any repo into a readable narrative via Tree-sitter AST parsing, semantic search, and LLM-powered commit evolution summaries.
+<a href="https://github.com/VidhuSarwal/gitscope">
+  <img height="130" src="https://github-readme-stats.vercel.app/api/pin/?username=VidhuSarwal&repo=gitscope&theme=github_dark_dimmed&hide_border=true&bg_color=161B22"/>
+</a>
+&nbsp;
+<a href="https://github.com/VidhuSarwal/hdmi-barcode-detector">
+  <img height="130" src="https://github-readme-stats.vercel.app/api/pin/?username=VidhuSarwal&repo=hdmi-barcode-detector&theme=github_dark_dimmed&hide_border=true&bg_color=161B22"/>
+</a>
 
-**[Beagle Tester Extensions](https://gist.github.com/VidhuSarwal/8e8d9dd93fea9075428cc6320c3b0a4f)** &nbsp; `C` `C++` `I2C` `Buildroot` &nbsp; — &nbsp; *GSoC '25*  
-Extended Linux hardware testing framework — mikroBUS ClickID auto-detection, HDMI validation, MQTT telemetry, CI; 30% perf gain, patches accepted upstream.
+</div>
+
+<br/>
+
+**VaultCrypt** &nbsp; `Go` `ChaCha20-DRBG` `AES-256-GCM` &nbsp; *(private)*  
+Zero-knowledge distributed storage — shards files across cloud providers, AES-256-GCM tokens at rest, server holds zero key material. 1k+ concurrent ops sub-500ms.
 
 ---
 
@@ -47,11 +57,21 @@ embedded     ESP32 · STM32 · I2C · MQTT · FreeRTOS · Buildroot
 
 ---
 
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/VidhuSarwal/vidhusarwal/output/snake-dark.svg"/>
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/VidhuSarwal/vidhusarwal/output/snake.svg"/>
+  <img alt="contribution snake" src="https://raw.githubusercontent.com/VidhuSarwal/vidhusarwal/output/snake-dark.svg" width="100%"/>
+</picture>
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=VidhuSarwal&bg_color=0d1117&color=58a6ff&line=3fb950&point=58a6ff&area=true&area_color=3fb95020&hide_border=true" width="100%"/>
+
+<br/>
+
 <div align="center">
 
-<img height="155" src="https://github-readme-stats.vercel.app/api?username=VidhuSarwal&show_icons=true&theme=github_dark&hide_border=true&count_private=true&hide=stars&rank_icon=github&custom_title=stats"/>
+<img height="155" src="https://github-readme-stats.vercel.app/api?username=VidhuSarwal&show_icons=true&theme=github_dark_dimmed&hide_border=true&count_private=true&hide_rank=false&rank_icon=percentile&bg_color=161B22&custom_title=stats"/>
 &nbsp;&nbsp;
-<img height="155" src="https://github-readme-stats.vercel.app/api/top-langs/?username=VidhuSarwal&layout=compact&theme=github_dark&hide_border=true&langs_count=6"/>
+<img height="155" src="https://github-readme-stats.vercel.app/api/top-langs/?username=VidhuSarwal&layout=compact&theme=github_dark_dimmed&hide_border=true&langs_count=6&bg_color=161B22&hide=jupyter%20notebook"/>
 
 </div>
 
