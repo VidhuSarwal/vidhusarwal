@@ -81,13 +81,13 @@ Bug triage and fixes in mainline under maintainer mentorship.
 Sole owner of a 61k-line async Python platform: LangGraph agents, hybrid BM25 + ChromaDB retrieval, Qwen-VL document parsing. Cut end-to-end latency 70%. Adopted by several teams as an internal NotebookLM replacement.
 
 **Software Engineering Intern** · Google Summer of Code, BeagleBoard.org &emsp;<sub>`2025`</sub>  
-Selected from 40,000+ applicants. Linux-hosted hardware testing in C and C++, 30% faster than what it replaced.
+Selected from 40,000+ applicants. Linux-hosted hardware testing in C and C++, with a 30% performance improvement.
 
 **Engineering Intern, Embedded** · Sentinal Innovations &emsp;<sub>`2024`</sub>  
 ESP32 firmware for an IoT relay system, shipped to 50+ homes and cutting their energy use 25%.
 
 **Smart India Hackathon** · National winner, team lead &emsp;<sub>`2024`</sub>  
-An AI expert-recommendation engine, out of 10,000+ participants.
+Led the team that built an AI expert-recommendation engine. National winner among 10,000+ participants.
 
 <br>
 
