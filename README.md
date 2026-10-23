@@ -12,8 +12,7 @@
   <a href="https://vidhux.dev/kernel">kernel log</a> &nbsp;·&nbsp;
   <a href="https://blog.vidhux.dev">blog</a> &nbsp;·&nbsp;
   <a href="https://linkedin.com/in/vidhusarwal">linkedin</a> &nbsp;·&nbsp;
-  <a href="https://x.com/vidhu_sarwal">x</a> &nbsp;·&nbsp;
-  <a href="mailto:vidhu.sarwal19@gmail.com">email</a>
+  <a href="https://x.com/vidhu_sarwal">x</a>
 </p>
 
 <br>
@@ -24,9 +23,9 @@
 </picture>
 
 - **Writing an upstream IIO driver** for the Benewake TF-Luna LiDAR, brought up on a Raspberry Pi 4 over I²C, including the parts the datasheet leaves out.
-- **Fixing bugs in mainline Linux** as a Linux Foundation kernel mentee: runtime-PM refcount leaks, IIO value encoding, a syzbot crash in ntfs3.
+- **Fixing bugs in mainline Linux** as a Linux Foundation kernel mentee. Latest: the am2315 driver decoded every negative temperature wrong. The fix is applied and marked for stable.
 - **Shipping [wiremark](https://github.com/VidhuSarwal/wiremark)**, an eBPF tracer that records what your app really sent to Redis, then replays it with Redis switched off.
-- **Finishing a CS degree.** Final year.
+- **Final year of CS** at Thapar Institute of Engineering & Technology.
 
 <br>
 
@@ -35,15 +34,16 @@
   <img alt="02 Upstream" src="assets/s-upstream-light.svg" width="100%">
 </picture>
 
-Seven patches merged into mainline so far, mostly in IIO. Every one is on lore.kernel.org.
+Nine patches accepted so far, across IIO, staging and ntfs3. The merged ones have been backported to stable kernels as far back as 5.10.
 
-- `merged` [iio: light: al3010: fix incorrect scale for the highest gain range](https://lore.kernel.org/all/20260704115245.11167-1-vidhu.linux@gmail.com/) <sub>v7.2 · Cc stable</sub>
-- `merged` [staging: media: ipu7: fix pm_runtime refcount leak in ipu7_resume()](https://lore.kernel.org/all/20260704083031.8524-3-vidhu.linux@gmail.com/) <sub>+1 sibling fix</sub>
-- `merged` [iio: light: ltrf216a: fix runtime PM reference leak in error path](https://lore.kernel.org/all/20260713022829.234370-1-vidhu.linux@gmail.com/)
-- `merged` [iio: light: opt4060: Reject integration times with a non-zero seconds part](https://lore.kernel.org/all/20260715011544.281148-1-vidhu.linux@gmail.com/) <sub>+2 in the series · Cc stable</sub>
-- `rfc   ` [fs/ntfs3: fix positive E_NTFS_NONRESIDENT leaking into writeback error path](https://lore.kernel.org/all/20260713084140.249515-1-vidhu.linux@gmail.com/) <sub>syzbot crash</sub>
+- `applied` [iio: humidity: am2315: fix negative temperature decoding](https://lore.kernel.org/all/?q=s%3A%22fix+negative+temperature+decoding%22+s%3Aam2315) <sub>-0.1 °C used to read as -3276.7 °C · Cc stable</sub>
+- `applied` [fs/ntfs3: prevent positive E_NTFS_NONRESIDENT from reaching writeback error handling](https://lore.kernel.org/all/?q=s%3A%22from+reaching+writeback+error+handling%22+s%3Antfs3) <sub>syzbot crash</sub>
+- `merged ` [iio: light: al3010: fix incorrect scale for the highest gain range](https://lore.kernel.org/all/?q=s%3A%22fix+incorrect+scale+for+the+highest+gain+range%22+s%3Aal3010) <sub>v7.2 · stable 5.10 to 7.1</sub>
+- `merged ` [iio: light: ltrf216a: fix runtime PM reference leak in error path](https://lore.kernel.org/all/?q=s%3Altrf216a+s%3A%22runtime+PM+reference+leak+in+error+path%22) <sub>stable 6.6 to 7.2</sub>
+- `merged ` [iio: light: opt4060: Reject integration times with a non-zero seconds part](https://lore.kernel.org/all/?q=s%3Aopt4060+s%3A%22Reject+integration+times+with+a+non-zero+seconds+part%22) <sub>+2 in the series · stable 6.18, 7.2</sub>
+- `merged ` [staging: media: ipu7: fix pm_runtime refcount leak in ipu7_resume()](https://lore.kernel.org/all/?q=s%3A%22refcount+leak+in+ipu7_resume%22) <sub>+1 sibling fix · stable 6.18, 7.2</sub>
 
-<sub>The full log, with a plain-English note on every patch, is at <a href="https://vidhux.dev/lore"><b>vidhux.dev/lore</b></a>.</sub>
+<sub>Plain-English write-ups live at <a href="https://vidhux.dev/lore"><b>vidhux.dev/lore</b></a>.</sub>
 
 <br>
 
@@ -52,20 +52,17 @@ Seven patches merged into mainline so far, mostly in IIO. Every one is on lore.k
   <img alt="03 Work" src="assets/s-work-light.svg" width="100%">
 </picture>
 
-**[wiremark](https://github.com/VidhuSarwal/wiremark)** &nbsp;<sub>`Go` `eBPF` &nbsp;·&nbsp; v0.2.0 &nbsp;·&nbsp; [wiremark.vidhux.dev](https://wiremark.vidhux.dev)</sub>  
-Watches a running process from inside the kernel, captures a real HTTP request and the Redis calls behind it, and turns them into a fixture you can replay later without Redis.
+**[TactileSight](https://github.com/VidhuSarwal/tactile-sight)** &nbsp;<sub>`C++` `Python` `STM32U585` `ARM64 Linux` &nbsp;·&nbsp; [demo](https://www.linkedin.com/posts/vidhusarwal_qualcomm-embeddedsystems-firmware-ugcPost-7486096142225551360-7bv3/)</sub>  
+**Winner, Qualcomm Snapdragon Multiverse Hackathon 2026.** Built in two days: a wearable that turns a depth camera's view into a 27-motor vibration grid for blind users. The depth-to-vibration path runs at 25 fps on ARM64 Linux, STM32 firmware drives the motors over I²C behind a watchdog failsafe, and a 5,235-frame soak test finished with zero crashes.
 
-**[shardX](https://github.com/VidhuSarwal/shardX)** &nbsp;<sub>`Go` `React` `AWS` `Terraform`</sub>  
-Zero-knowledge object storage. Uploads become ChaCha20 noise split into shards on S3 under KMS. The server never holds the key, so a full bucket-and-database compromise yields nothing readable.
+**[wiremark](https://github.com/VidhuSarwal/wiremark)** &nbsp;<sub>`Go` `eBPF` `uprobes` &nbsp;·&nbsp; [wiremark.vidhux.dev](https://wiremark.vidhux.dev)</sub>  
+Watches a running process at the syscall boundary, with no code changes, and decodes its traffic into HTTP and Redis interactions. One recorded request becomes a readable YAML fixture that replays later with Redis turned off.
 
-**[tactile-sight](https://github.com/VidhuSarwal/tactile-sight)** &nbsp;<sub>`Python` `Arduino UNO Q` `STM32`</sub>  
-A depth camera wired to a vibration band for the visually impaired. Each depth frame becomes a 7×3 haptic grid that the on-board STM32 plays on the band's motors over I²C.
+**[VaultCrypt](https://github.com/VidhuSarwal/vcrypt)** &nbsp;<sub>`Go` `Docker` `MongoDB` &nbsp;·&nbsp; [vcrypt.vidhux.dev](https://vcrypt.vidhux.dev)</sub>  
+I kept running out of storage, so I pooled several free Google accounts into one logical drive. Large files are chunked across accounts and reassembled on read, with AES-256-GCM at rest and JWT auth. Handles 1,000+ concurrent operations under 500 ms. [shardX](https://github.com/VidhuSarwal/shardX) takes the same idea to AWS.
 
-**[GSoC '25 · BeagleBoard.org](https://gist.github.com/VidhuSarwal/8e8d9dd93fea9075428cc6320c3b0a4f)** &nbsp;<sub>`C` `I²C` `Buildroot` `MQTT` &nbsp;·&nbsp; [beagle-tester](https://github.com/VidhuSarwal/beagle-tester)</sub>  
-Hardware test tooling for BeagleBoard designs: I²C bus scan, EEPROM dispatch, mikroBUS ClickID auto-detection and OpenCV HDMI validation, with a Buildroot cross-compiled CI.
-
-**[GitScope](https://github.com/VidhuSarwal/gitscope)** &nbsp;<sub>`Python` `Tree-sitter` `ChromaDB` &nbsp;·&nbsp; [live](https://gitscope-nine.vercel.app)</sub>  
-Turns a GitHub repo into a readable story: per-function breakdowns from the Tree-sitter AST, semantic search, and LLM summaries of how the code evolved.
+**[GitScope](https://github.com/VidhuSarwal/gitscope)** &nbsp;<sub>`Python` `FastAPI` `Tree-sitter` `ChromaDB` &nbsp;·&nbsp; [gitscope.vidhux.dev](https://gitscope.vidhux.dev)</sub>  
+Turns a GitHub repo into something you can read. It parses 50k+ lines into per-function breakdowns through the AST, adds semantic search over embeddings, and caches answers so repeat questions are cheap.
 
 <br>
 
@@ -74,57 +71,47 @@ Turns a GitHub repo into a readable story: per-function breakdowns from the Tree
   <img alt="04 Experience" src="assets/s-experience-light.svg" width="100%">
 </picture>
 
-**Kernel Developer Mentee** · Linux Foundation, LFX Mentorship &emsp;<sub>`2026 – now`</sub>  
-Bug triage and fixes in mainline under maintainer mentorship.
+**Kernel Developer Mentee** · The Linux Foundation, LFX Mentorship &emsp;<sub>`Jun 2026 – now`</sub>  
+Bug triage and fixes in mainline under maintainer mentorship. Nine patches accepted.
 
-**Research Intern, AI Infrastructure** · Samsung R&D, PRISM &emsp;<sub>`2025 – 2026`</sub>  
-Sole owner of a 61k-line async Python platform: LangGraph agents, hybrid BM25 + ChromaDB retrieval, Qwen-VL document parsing. Cut end-to-end latency 70%. Adopted by several teams as an internal NotebookLM replacement.
+**Research Intern, AI Infrastructure** · Samsung Research &emsp;<sub>`Jan 2025 – Feb 2026`</sub>  
+Sole owner of a 61k-line async Python platform: LangGraph multi-agent orchestration, hybrid BM25 + ChromaDB retrieval over documents and spreadsheets, a React frontend and 45+ tests. Cut end-to-end latency by about 70%.
 
-**Software Engineering Intern** · Google Summer of Code, BeagleBoard.org &emsp;<sub>`2025`</sub>  
-Selected from 40,000+ applicants. Linux-hosted hardware testing in C and C++, with a 30% performance improvement.
+**Software Engineering Intern** · [Google Summer of Code](https://gist.github.com/VidhuSarwal/8e8d9dd93fea9075428cc6320c3b0a4f), BeagleBoard.org &emsp;<sub>`Jun – Sep 2025`</sub>  
+1 of 1,200 picked from 40,000+ applicants. Extended [Beagle-Tester](https://github.com/VidhuSarwal/beagle-tester), the hardware test tool for TI Sitara AM335x boards, with mikroBUS ClickID auto-detection, OpenCV HDMI validation, a live dashboard, MQTT and Buildroot images built in CI. Around 30% faster.
 
-**Engineering Intern, Embedded** · Sentinal Innovations &emsp;<sub>`2024`</sub>  
-ESP32 firmware for an IoT relay system, shipped to 50+ homes and cutting their energy use 25%.
+**Engineering Intern, Embedded** · Sentinal Innovations &emsp;<sub>`Jun – Aug 2024`</sub>  
+ESP32 firmware in Embedded C on FreeRTOS for a real-time IoT relay controller, deployed to 50+ units.
 
-**Smart India Hackathon** · National winner, team lead &emsp;<sub>`2024`</sub>  
-Led the team that built an AI expert-recommendation engine. National winner among 10,000+ participants.
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/s-wins-dark.svg">
+  <img alt="05 Wins" src="assets/s-wins-light.svg" width="100%">
+</picture>
+
+- **Qualcomm Snapdragon Multiverse Hackathon** · winner &emsp;<sub>`2026`</sub>  
+  TactileSight, built in two days.
+- **ZS Campus Beats** · winner &emsp;<sub>`2026`</sub>  
+  National data and analytics case competition.
+- **Smart India Hackathon** · winner, team lead &emsp;<sub>`2024`</sub>  
+  National, 10,000+ participants. Our AI expert-recommendation engine matched queries across 500+ domains in under 200 ms.
+- **World Robot Olympiad** · regional winner, national top 3
 
 <br>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/s-toolchain-dark.svg">
-  <img alt="05 Toolchain" src="assets/s-toolchain-light.svg" width="100%">
+  <img alt="06 Toolchain" src="assets/s-toolchain-light.svg" width="100%">
 </picture>
 
 ```text
-systems      C · C++ · Go · Rust · Bash
-kernel       IIO · runtime PM · device tree · eBPF · patch workflow
-embedded     ESP32 · STM32 · I²C · SPI · UART · MQTT · FreeRTOS · Buildroot
-backend      Python · FastAPI · PostgreSQL · Redis · Docker · AWS · Terraform
-ai / ml      LangGraph · ChromaDB · Tree-sitter · Qwen-VL · RAG
+languages    C · C++ · Go · Python · Bash · SQL · assembly
+kernel       IIO · runtime PM · device tree · sysfs · eBPF · QEMU · gdb · KASAN
+embedded     STM32 · ESP32 · FreeRTOS · Buildroot · I²C · SPI · UART · MQTT
+backend      FastAPI · REST · MongoDB · Docker · Kubernetes · AWS EC2 · NGINX · CI/CD
+ai / ml      LLMs · RAG · LangGraph · ChromaDB · embeddings · Tree-sitter
 ```
-
-<br>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/s-maintainers-dark.svg">
-  <img alt="06 Maintainers" src="assets/s-maintainers-light.svg" width="100%">
-</picture>
-
-```text
-VIDHU SARWAL
-M:	Vidhu Sarwal <vidhu.linux@gmail.com>
-S:	Maintained
-W:	https://vidhux.dev
-W:	https://blog.vidhux.dev
-T:	git https://github.com/VidhuSarwal
-F:	hardware/
-F:	linux/
-F:	distributed-systems/
-F:	llms/
-```
-
-<sub>Happy to talk kernel, embedded or infrastructure work. <a href="mailto:vidhu.sarwal19@gmail.com">Email</a> is the fastest way to reach me.</sub>
 
 <br>
 
