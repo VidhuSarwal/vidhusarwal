@@ -274,8 +274,9 @@ def hero(t):
     # top bar
     g, _ = svg.text(M, 44, "VX.", "display-bold", 19, t["ink"], ls=-0.5)
     add(g)
-    g, _ = svg.text(W - M, 43, "FINAL-YEAR CS  ·  LKMP '26  ·  GSOC '25  ·  SAMSUNG PRISM '25",
-                    "mono", 10.5, t["sec"], anchor="end", ls=1.6)
+    g, w_bar = svg.text(W - M, 43, "FINAL-YEAR CS  ·  LKMP '26  ·  GSOC '25  ·  SAMSUNG RESEARCH '25  ·  "
+                        "QUALCOMM HACKATHON WINNER '26", "mono", 10.5, t["sec"], anchor="end", ls=1.1)
+    assert w_bar < W - 2 * M - 70, f"top bar too wide: {w_bar:.0f}px"
     add(g)
     add(f'<path d="M{M} 62H{W - M}" stroke="{t["hair"]}"/>')
 
@@ -285,7 +286,7 @@ def hero(t):
     g, _ = svg.text(M - 4 + w_name - 1, 162, ".", "display", 94, t["accent"], attrs=' class="led"')
     add(g)
 
-    g, _ = svg.text(M - 1, 206, "Systems engineer — Linux kernel, embedded, distributed systems.",
+    g, _ = svg.text(M - 1, 206, "Systems engineer. Linux kernel, embedded, distributed systems.",
                     "body", 23, t["sec"], ls=-0.2)
     add(g)
 
@@ -375,7 +376,7 @@ def hero(t):
     add(g)
 
     # caption
-    g, _ = svg.text(M, 398, "FIG. 1 — I²C WRITE TO 0x10, DECODED", "mono", 10.5, t["ter"], ls=1.6)
+    g, _ = svg.text(M, 398, "FIG. 1  ·  I²C WRITE TO 0x10, DECODED", "mono", 10.5, t["ter"], ls=1.6)
     add(g)
     g, _ = svg.text(W - M, 398, "30.7333°N  76.7794°E", "mono", 10.5, t["ter"], anchor="end", ls=1.6)
     add(g)
@@ -386,11 +387,11 @@ def hero(t):
 
 SECTIONS = [
     ("now", "01", "Now", "what's on the bench"),
-    ("upstream", "02", "Upstream", "patches in mainline linux"),
+    ("upstream", "02", "Upstream", "patches to mainline linux"),
     ("work", "03", "Work", "selected projects"),
     ("experience", "04", "Experience", "revision history"),
-    ("toolchain", "05", "Toolchain", "what I reach for"),
-    ("maintainers", "06", "Maintainers", "get in touch"),
+    ("wins", "05", "Wins", "competitions"),
+    ("toolchain", "06", "Toolchain", "what I reach for"),
 ]
 
 
